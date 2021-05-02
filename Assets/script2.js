@@ -10,7 +10,9 @@ var saveBtn = $(".saveBtn"); //Savebtn Jquery
 // var currentHourInt = parseInt(currentHour); // variable that Returns the currenHour to an integer
 // console.log("currentHourInt:",currentHourInt) //Console to confirm that current hour is now an integer
 
-//function runs whenever the save button is clicked. Records the key/value (inputtext/currentime) for the selected time block
+//Function runs whenever the save button is clicked. 
+//Records the key/value (input text/current time) for the selected time block
+//Alerts the user that the input text has been recorded
 saveBtn.on("click", function () { // On-click 
     var currentTimeValue = $(this).parent().attr("id"); //Gets time from ID in selected time block 
     var inputTextValue = $(this).siblings(".description").val(); //Gets input text from CLASS in the selected text area
@@ -19,28 +21,23 @@ saveBtn.on("click", function () { // On-click
     });
 
 
-//load saved data from local storage
+//Load saved data from local storage
 //Retrieve item/info from ID and description 
-
-$('#9th-hour .description').val(localStorage.getItem('9th-hour'));
-$('#10th-hour .description').val(localStorage.getItem('10th-hour'));
-$('#11th-hour .description').val(localStorage.getItem('11th-hour'));
-$('#12th-hour .description').val(localStorage.getItem('12th-hour'));
-$('#13th-hour .description').val(localStorage.getItem('13th-hour'));
-$('#14th-hour .description').val(localStorage.getItem('14th-hour'));
-$('#15th-hour .description').val(localStorage.getItem('15th-hour'));
-$('#16th-hour .description').val(localStorage.getItem('16th-hour'));
-$('#17th-hour .description').val(localStorage.getItem('17th-hour'));
+//Does Reappear if user exits the window and loads it again
+$('#9-hour .description').val(localStorage.getItem('9-hour'));
+$('#10-hour .description').val(localStorage.getItem('10-hour'));
+$('#11-hour .description').val(localStorage.getItem('11-hour'));
+$('#12-hour .description').val(localStorage.getItem('12-hour'));
+$('#13-hour .description').val(localStorage.getItem('13-hour'));
+$('#14-hour .description').val(localStorage.getItem('14-hour'));
+$('#15-hour .description').val(localStorage.getItem('15-hour'));
+$('#16-hour .description').val(localStorage.getItem('16-hour'));
+$('#17-hour .description').val(localStorage.getItem('17-hour'));
 
 
 //function to change background color regarding the current time. Timeblocks to past/present/future 
-// function currentTimeColor() {
+function currentTimeColor() {
   var currentHour = moment().hours();
-  console.log("currentHour:", currentHour)
   
+}
 
-
-
-
-
-// }
