@@ -2,13 +2,15 @@
 $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 
 //Declared a global variable
-var saveBtn = $(".saveBtn"); //Savebtn jquery 
-var currentHour = moment().format("HH"); // Variable for current hour 
-// console.log("currentHour:",currentHour) Console to confirm current hour
-var currentHourInt = parseInt(currentHour); // variable that Returns the currenHour to an integer
+var saveBtn = $(".saveBtn"); //Savebtn Jquery
+
+
+// var currentHour = moment().format("HH"); // Variable for current hour 
+// console.log("currentHour:",currentHour) //Console to confirm current hour
+// var currentHourInt = parseInt(currentHour); // variable that Returns the currenHour to an integer
 // console.log("currentHourInt:",currentHourInt) //Console to confirm that current hour is now an integer
 
-
+//function runs whenever the save button is clicked. Records the key/value (inputtext/currentime) for the selected time block
 saveBtn.on("click", function () { // On-click 
     var currentTimeValue = $(this).parent().attr("id"); //Gets time from ID in selected time block 
     var inputTextValue = $(this).siblings(".description").val(); //Gets input text from CLASS in the selected text area
@@ -32,9 +34,13 @@ $('#17th-hour .description').val(localStorage.getItem('17th-hour'));
 
 
 //function to change background color regarding the current time. Timeblocks to past/present/future 
-function currentTimeColor() {
+// function currentTimeColor() {
+  var currentHour = moment().hours();
+  console.log("currentHour:", currentHour)
+  
 
 
 
 
-}
+
+// }
