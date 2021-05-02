@@ -3,11 +3,12 @@ $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 
 //Declared a global variable
 var saveBtn = $(".saveBtn"); //Savebtn jquery 
-
+    
 saveBtn.on("click", function () { // On-click 
     var currentTimeValue = $(this).parent().attr("id"); //Gets time from ID in selected time block 
     var inputTextValue = $(this).siblings(".description").val(); //Gets input text from CLASS in the selected text area
       localStorage.setItem(currentTimeValue, inputTextValue); // save data in localStorage
+      alert('Your Event Has Been Saved!')
     });
 
 
