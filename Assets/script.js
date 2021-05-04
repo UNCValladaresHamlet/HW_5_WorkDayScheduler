@@ -42,13 +42,13 @@ var currentHourInt = parseInt(currentHour); // variable that Returns the currenH
   $('.time-block').each(function () {
     var blockHour = parseInt($(this).attr('id').split('-')[1]);
     // console.log(blockHour)
-    if (blockHour < currentHourInt) { //
-      $(this).addClass('past');
+    if (blockHour < currentHourInt) { ////Block hour is returned as integer and is compared to the currenthour integer
+      $(this).addClass('past'); ////If block time is less than current hour then change class to GRAY (past CSS class)
     } else if (blockHour === currentHourInt) {
-      $(this).removeClass('past');
-      $(this).addClass('present');
+      $(this).removeClass('past');////If block time is equal to current hour then change class to GRAY (past CSS class)
+      $(this).addClass('present');////If block time is equal than current hour then change class to RED (current CSS class)
     } else {
-      $(this).removeClass('past');
+      $(this).removeClass('past'); //Any other cas change class to appropriate CSS class
       $(this).removeClass('present');
       $(this).addClass('future');
     }
