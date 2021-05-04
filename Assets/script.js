@@ -35,15 +35,14 @@ $('#hour-17 .description').val(localStorage.getItem('hour-17'));
 function currentTimeColor() {
  
 var currentHour = moment().format("HH"); // Variable for current hour 
-console.log("currentHour:",currentHour) //Console to confirm current hour
+// console.log("currentHour:",currentHour) //Console to confirm current hour
 var currentHourInt = parseInt(currentHour); // variable that Returns the currenHour to an integer
-console.log("currentHourInt:",currentHourInt) //Console to confirm that current hour is now an integer
+// console.log("currentHourInt:",currentHourInt) //Console to confirm that current hour is now an integer
   
   $('.time-block').each(function () {
     var blockHour = parseInt($(this).attr('id').split('-')[1]);
-  
-    console.log(blockHour)
-    if (blockHour < currentHourInt) {
+    // console.log(blockHour)
+    if (blockHour < currentHourInt) { //
       $(this).addClass('past');
     } else if (blockHour === currentHourInt) {
       $(this).removeClass('past');
