@@ -1,8 +1,8 @@
 # HW_5_WorkDayScheduler
 
-## Your Task
 <img width="945" alt="hw5" src="https://user-images.githubusercontent.com/80364592/116960180-a5eb3500-ac6d-11eb-9964-0df136e08ab8.PNG">
 
+## Your Task
 Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
 You'll need to use the Moment.js library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
@@ -34,5 +34,5 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
-## URL Link to Quiz 
+## URL Link
 https://uncvalladareshamlet.github.io/HW_5_WorkDayScheduler/
